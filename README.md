@@ -28,7 +28,7 @@ The objective of Movie-X is to create a user-friendly platform where users can:
 - **Responsive Design:** Ensures a seamless experience across desktop, tablet, and mobile devices.
 - **Smooth Navigation:** Provides easy navigation between the movie list and favorite movies pages.
 
-**Deployed Link:** _[Live Site URL]( )_
+**Deployed Link:** _[Live Site URL](https://movie-x-live.vercel.app/)_
 
 
 ## Installation
