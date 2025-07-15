@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #01deee;
+}
+
+/* Optional: widen the react-select dropdown */
+.css-13cymwt-control {
+  min-height: 38px;
+}

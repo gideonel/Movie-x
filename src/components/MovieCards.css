@@ -1,0 +1,135 @@
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* For smaller screens (mobile), force 3 columns */
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Optional: For very small screens, like phones, 2 columns or 1 */
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 320px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.03);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+
+
+.movie-info a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #007acc;
+  text-decoration: none;
+}
+
+.favorite-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+  transition: color 0.3s ease;
+  padding-left: 100px;
+}
+
+.favorite-btn.favorite {
+  color: red;
+}
+
+.favorite-btn:hover {
+  color: red;
+}
+
+.movie-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make filter buttons wrap nicely on small screens */
+.movie-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f0f0f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.movie-filters .filter-group {
+  flex: 1 1 150px;
+  min-width: 150px;
+}
+
+/* Genre buttons */
+.genre-btn {
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 0.25rem 0.25rem 0;
+  transition: background-color 0.3s ease;
+}
+
+.genre-btn.selected {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Slider styling */
+input[type=range] {
+  width: 100%;
+}
+
+/* Responsive grid */
+@media (max-width: 768px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
